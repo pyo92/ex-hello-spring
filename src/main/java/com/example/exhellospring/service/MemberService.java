@@ -3,14 +3,18 @@ package com.example.exhellospring.service;
 import com.example.exhellospring.domain.Member;
 import com.example.exhellospring.repository.MemberRepository;
 import com.example.exhellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

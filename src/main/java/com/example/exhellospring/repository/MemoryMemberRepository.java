@@ -1,12 +1,14 @@
 package com.example.exhellospring.repository;
 
 import com.example.exhellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 /**
  * 동시성 문제 고려 X -> 실무에서는 ConcurrentHashMap, AtomicLong 적용
  */
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
