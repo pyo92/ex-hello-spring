@@ -11,12 +11,6 @@ import java.util.Optional;
 public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
 
     @Override
-    Optional<Member> findById(Long aLong);
-
-    @Override
     Optional<Member> findByName(String name);
-
-    @Override
-    List<Member> findAll();
 
 }
